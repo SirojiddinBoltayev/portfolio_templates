@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-Widget AppBarWidget() {
+Widget appBarWidget() {
   return Container(
-    margin: EdgeInsets.only(bottom: 20),
+    margin: const EdgeInsets.only(bottom: 20),
     // color: Colors.red,
     width: double.infinity,
     height: 90,
@@ -11,31 +11,39 @@ Widget AppBarWidget() {
       child: Row(
         children: [
           Column(
-            children:  [
-              Spacer(
+            children: [
+              const Spacer(
                 flex: 5,
               ),
-              Container(
+              SizedBox(
                 width: 85,
                 // color: Colors.red,
-                child: DefaultTextStyle(
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  child: AnimatedTextKit(
-
-                      repeatForever: true,
-                    animatedTexts: [
-                      FadeAnimatedText('BS.'),
-                    ],
-                    onTap: (){
-                    },
-                  ),
+                child: AnimatedTextKit(
+                  pause: const Duration(microseconds: 1),
+                  repeatForever: true,
+                  animatedTexts: [
+                    ColorizeAnimatedText('SB.',
+                        speed: const Duration(seconds: 20),
+                        textStyle: const TextStyle(fontSize: 20),
+                        colors: <Color>[
+                          Colors.indigo,
+                          Colors.red,
+                          Colors.indigo,
+                          Colors.red,
+                          Colors.indigo,
+                          Colors.red,
+                          Colors.indigo,
+                          Colors.red,
+                          Colors.indigo,
+                          Colors.red,
+                          Colors.indigo,
+                          Colors.red,
+                        ]),
+                  ],
+                  onTap: () {},
                 ),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
           const Spacer(
@@ -47,7 +55,6 @@ Widget AppBarWidget() {
                 flex: 5,
               ),
               Text("Projects"),
-
               Spacer(),
             ],
           ),
@@ -58,7 +65,6 @@ Widget AppBarWidget() {
                 flex: 5,
               ),
               Text("Resume"),
-
               Spacer(),
             ],
           ),
@@ -78,7 +84,10 @@ Widget AppBarWidget() {
               Spacer(
                 flex: 5,
               ),
-              Icon(Icons.sunny,size: 20,),
+              Icon(
+                Icons.sunny,
+                size: 20,
+              ),
               Spacer(),
             ],
           ),

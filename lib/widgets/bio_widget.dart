@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-Widget BioWidget(){
-  return  Container(
+Widget bioWidget(){
+  return  SizedBox(
     // color: Colors.red,
     height: 300,
     child: DefaultTextStyle(

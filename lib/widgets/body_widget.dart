@@ -1,15 +1,15 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-Widget BodyWidget(){
+Widget bodyWidget(){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      SizedBox(height: 15,),
-      Text("Salom Men"),
-      SizedBox(height: 40,),
+      const SizedBox(height: 15,),
+      const Text("Salom Men"),
+      const SizedBox(height: 40,),
 
-      Container(
+      SizedBox(
 height: 60,
 
         // color: Colors.red
@@ -37,7 +37,7 @@ flex: 2,
                       ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 100.0))
                   ),
                   child: AnimatedTextKit(
-                      pause: Duration(milliseconds: 15),
+                      pause: const Duration(milliseconds: 15),
                       repeatForever: true,
                       isRepeatingAnimation: true,
                       animatedTexts: [
@@ -51,7 +51,7 @@ flex: 2,
 
 
             Expanded(
-              flex: 5,
+              flex: 6,
               // color: Colors.red,
               child: DefaultTextStyle(
                 style:  TextStyle(
@@ -68,7 +68,7 @@ flex: 2,
                     ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 100.0))
                 ),
                 child: AnimatedTextKit(
-                  pause: Duration(milliseconds: 2),
+                  pause: const Duration(milliseconds: 2),
                   repeatForever: true,
                   animatedTexts: [
                     FadeAnimatedText('Boltayev'),
