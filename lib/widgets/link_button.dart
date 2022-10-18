@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 Widget linkButton() {
   return Row(
@@ -40,7 +38,7 @@ Widget linkButton() {
             child: Container(
               margin: const EdgeInsets.all(1.5),
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                   borderRadius: BorderRadius.circular(5)),
               child: Row(
                 children: [
                   const Spacer(),
@@ -63,15 +61,14 @@ Widget linkButton() {
         ),
       // ),
       const Spacer(),
-      // Link(
-      // target: LinkTarget.blank,
-      // uri: Uri.parse("https://SirojBoltayev.t.me"),
-      // builder:(context,followLink) =>
-          InkWell(
 
-      onTap: (){
-        launchUrlString("https://t.me/sirojboltayev");
-  },
+  Link(
+  target: LinkTarget.defaultTarget,
+  uri: Uri.parse("https://t.me.SirojBoltayev"),
+  builder:(context,followLink) =>
+  InkWell(
+
+      onTap: () => followLink,
       child:Container(
         height: 30,
         width: 115,
@@ -91,7 +88,7 @@ Widget linkButton() {
         child: Container(
           margin: const EdgeInsets.all(1.5),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(5)),
+               borderRadius: BorderRadius.circular(5)),
           child: Row(
             children: const [
               Spacer(),
@@ -110,12 +107,9 @@ Widget linkButton() {
         ),
       ),
             ),
-            // ),
+            ),
       const Spacer(),
-  // Link(
-  // target: LinkTarget.blank,
-  // uri: Uri.parse("https://github.com/SirojiddinBoltayev"),
-  // builder:(context,followLink) =>
+
   InkWell(
 
   onTap: (){launchUrlString("mailto:sirojboltayev0948@gmail.com");},
@@ -129,7 +123,6 @@ Widget linkButton() {
               colors: <Color>[
                 Color(0xffffb56b),
                 Color(0xffe16b5c),
-                Color(0xff413839),
                 Colors.deepPurple,
               ],
               // Gradient from https://learnui.design/tools/gradient-generator.html
@@ -139,7 +132,7 @@ Widget linkButton() {
         child: Container(
           margin: const EdgeInsets.all(1.5),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(5)),
+               borderRadius: BorderRadius.circular(5)),
           child: Row(
             children: const [
               Spacer(),
@@ -161,6 +154,9 @@ Widget linkButton() {
       const Spacer(
         flex: 8,
       ),
+
     ],
   );
 }
+
+

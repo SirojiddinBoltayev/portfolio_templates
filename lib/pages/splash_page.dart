@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:portfolio_templates/pages/home_page.dart';
-import '../home.dart';
 import 'package:flutter/material.dart';
 
 class SplashFuturePage extends StatefulWidget {
@@ -15,7 +14,7 @@ class SplashFuturePage extends StatefulWidget {
 class _SplashFuturePageState extends State<SplashFuturePage> {
   Future<Widget> futureCall() async {
     // do async operation ( api call, auto login)
-    return Future.value(new MyHomePage1());
+    return Future.value(new MyHomePage1(onChanged: () {  },));
   }
 
   @override
